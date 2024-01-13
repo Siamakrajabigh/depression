@@ -19,7 +19,6 @@ This project focuses on predicting depression using actigraphy data collected fr
 
 The dataset includes actigraphy data collected from different devices, and each row represents a timestamped activity reading. The columns include 'timestamp,' 'date,' and 'activity,' providing essential information for analysis.
 
-![Dataset Screenshot](path/to/dataset/screenshot.png)
 
 ## Data Preprocessing
 
@@ -31,5 +30,8 @@ Data preprocessing involves handling missing values and normalizing features. Mi
 
 This analysis decomposes the actigraphy signal using Singular Spectrum Analysis (SSA). SSA is related to Principal Component Analysis (PCA) and helps quantify the variance of additive components. The resulting scree diagram visualizes partial variances, providing insights into the periodic components of the signal.
 
-```python
-# Insert code snippet for SSA analysis
+### Cosinor Analysis with pyActigraphy
+
+single-component Cosinor analysis to actigraphy data using the pyActigraphy package. The Cosinor analysis aims to estimate key parameters of the actigraphy count series by fitting the data with a cosine curve characterized by a 24-hour period.
+The analysis workflow involves importing the necessary packages, defining file paths, initializing the Cosinor object, setting initial fit values, and performing the fit on the actigraphy data. Visualization tools are provided to assess the goodness of fit and understand the circadian rhythm patterns.
+
