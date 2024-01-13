@@ -1,5 +1,4 @@
-# depression
-# Project Title
+# Depresjon
 
 Brief description of your project.
 
