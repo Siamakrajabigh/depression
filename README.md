@@ -1,31 +1,35 @@
-# Depresjon
+# Depression Prediction Using Actigraphy Data
 
-Brief description of your project.
+## Introduction
+
+This project focuses on predicting depression using actigraphy data collected from various devices. Actigraphy, a non-invasive method, involves monitoring activity patterns over time. The analysis involves the utilization of the pyActigraphy library and various statistical techniques to gain insights into individuals' circadian rhythms and rest-activity patterns.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Dataset Description](#dataset-description)
 - [Data Preprocessing](#data-preprocessing)
 - [Analysis](#analysis)
 - [Results](#results)
 - [Dependencies](#dependencies)
+- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
+## Dataset Description
 
-Provide a brief overview of your project, its purpose, and any goals you aim to achieve.
+The dataset includes actigraphy data collected from different devices, and each row represents a timestamped activity reading. The columns include 'timestamp,' 'date,' and 'activity,' providing essential information for analysis.
 
-## Features
+![Dataset Screenshot](path/to/dataset/screenshot.png)
 
-Outline the main features or functionalities of your project. Mention any notable techniques or algorithms used.
+## Data Preprocessing
 
-## Installation
+Data preprocessing involves handling missing values and normalizing features. Missing values are replaced using an auto-replacement technique, ensuring a consistent dataset. Feature normalization is performed using the window-cutting technique to omit the initial and final data, addressing zero values due to variations in device usage times.
 
-Provide instructions on how to install and set up your project. Include any dependencies and installation commands.
+## Analysis
 
-```bash
-pip install -r requirements.txt
+### Singular Spectrum Analysis (SSA)
+
+This analysis decomposes the actigraphy signal using Singular Spectrum Analysis (SSA). SSA is related to Principal Component Analysis (PCA) and helps quantify the variance of additive components. The resulting scree diagram visualizes partial variances, providing insights into the periodic components of the signal.
+
+```python
+# Insert code snippet for SSA analysis
